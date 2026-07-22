@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Webpage</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#1e0db4;
+}
+
+.sidebar{
+position:fixed;
+width:220px;
+height:100%;
+background:#8addf7;
+padding-top:20px;
+}
+
+.sidebar a{
+display:block;
+padding:15px;
+color:rgb(29, 152, 201);
+text-decoration:none;
+font-weight:bold;
+cursor:pointer;
+}
+
+.sidebar a:hover{
+background:#052036;
+}
+
+.main{
+margin-left:230px;
+padding:20px;
+}
+
+.header{
+background:#114631;
+color:rgba(245, 248, 248, 0.973);
+text-align:center;
+padding:20px;
+font-size:30px;
+border-radius:10px;
+box-shadow:0px 3px 6px rgba(0,0,0,0.2);
+}
+
+.card{
+background:#242346;
+color:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0px 3px 6px rgba(0,0,0,0.2);
+margin-top:20px;
+font-size:18px;
+}
+
+.intro{
+background:#242346;
+color:#f0eae9;
+}
+
+.profile-pic{
+width:180px;
+height:180px;
+background:#ddd;
+border-radius:50%;
+margin:30px auto;
+box-shadow:0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.section{
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('profile')">Profile</a>
+<a onclick="showPage('contact')">Contact/Social Media</a>
+<a onclick="showPage('about')">About Me</a>
+</div>
+
+<div class="main">
+
+<div id="home" class="section">
+<div class="header">Welcome to my First Webpage</div>
+
+<div class="card intro">
+This is my First Web Assignment. I am learning HTML and CSS to create websites.I hope to improve my web development skills.
+</div>
+</div>
+
+
+<div id="profile" class="section">
+
+<div class="header">Profile</div>
+<div style="text-align:center;">
+<img src="pic.jpg" class="profile-pic">
+</div>
+
+
+<div class="card">
+Name: Dave Ronald R. Guisihan <br><br>
+Age: 18 <br><br>
+Course/Year: BSCS - First Year <br><br>
+Home Address: Danicop, Antequera, Bohol <br><br>
+School: University Of Bohol
+</div>
+
+</div>
+
+
+<div id="contact" class="section">
+
+<div class="header">Contact / Social Media</div>
+
+<div class="card">
+<h2>Social Media</h2>
+
+Facebook: Dave Ronald Guisihan <br><br>
+Youtube Channel: Dave Ronald GUISIHAN <br><br>
+Instagram: @dve.rnld
+</div>
+
+<div class="card">
+<h2>Contact</h2>
+
+TNT: 093893021271 <br><br>
+Email: gdaveronald@gmail.com
+</div>
+
+</div>
+
+
+<!-- ABOUT ME -->
+<div id="about" class="section">
+
+<div class="header">About Me</div>
+
+<div class="card">
+Hello everyone My name is Dave Ronald Guisihan and I'm a first-year computer science student in University Of Bohol.
+  I live in Danicop Antequera Bohol and i'm 18 years of age and i like playing basketball.
+   My dream goal is to have a stable job to travel around the world and gradute in the course i take,But for now i want to be a TAMBAY.
+
+</div>
+
+</div>
+
+<script>
+
+function showPage(page){
+var sections = document.querySelectorAll(".section");
+
+sections.forEach(function(section){
+section.style.display="none";
+});
+
+document.getElementById(page).style.display="block";
+}
+
+/* default page */
+showPage("home");
+
+</script>
+
+</body>
+</html>
